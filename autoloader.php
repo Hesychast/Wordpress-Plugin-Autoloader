@@ -32,7 +32,7 @@ function yv_autoloader( $class )
     array_push( $path_array, $class_name);
 
     // Convert array elements to the real path string
-    $class_path = realpath( implode( DIRECTORY_SEPARATOR, $path_array ) );
+    $class_path = realpath( dirname(__FILE__) . DIRECTORY_SEPARATOR . implode( DIRECTORY_SEPARATOR, $path_array ) );
 
     // Check file exists
     if ( ! is_file( $class_path ) ) {
