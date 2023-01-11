@@ -1,0 +1,1 @@
+Simple implementation of the autoloader corresponds to the WordPress PHP Coding Standards.
