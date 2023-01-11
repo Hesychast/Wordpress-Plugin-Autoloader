@@ -1,4 +1,12 @@
 <?php
+/**
+ * Name:     Wordpress Plugin Autoloader
+ * URI:      https://github.com/Hesychast/Wordpress-Plugin-Autoloader
+ * Description:     Simple implementation of the autoloader corresponds to the WordPress PHP Coding Standards.
+ * Author:          Hesychast
+ * Author URI:      https://github.com/Hesychast
+ */
+
 function yv_autoloader( $class )
 {
     // Transform a received class name string to the array divided by namespace separators.
