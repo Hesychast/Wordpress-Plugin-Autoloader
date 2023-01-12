@@ -24,15 +24,15 @@ function yv_autoloader( $class )
     $path_array = [];
 
     // Convert all remaining array elements to lowercase and fill up a new array with them.
-    foreach( $class_array as $element) {
-        array_push( $path_array, strtolower($element) );
+    foreach( $class_array as $element ) {
+        array_push( $path_array, strtolower( $element ) );
     }
 
     // Add the transformed name of the class file.
-    array_push( $path_array, $class_name);
+    array_push( $path_array, $class_name );
 
     // Convert array elements to the real path string
-    $class_path = realpath( dirname(__FILE__) . DIRECTORY_SEPARATOR . implode( DIRECTORY_SEPARATOR, $path_array ) );
+    $class_path = realpath( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . implode( DIRECTORY_SEPARATOR, $path_array ) );
 
     // Check file exists
     if ( ! is_file( $class_path ) ) {
